@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>MSHA Training Videos - Questions for Nathan</title>
+<style>
+  :root { --green:#215732; --green-lt:#e8f0ea; --ink:#1d1d1d; --muted:#5b6670; --line:#d5dbd7; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#f4f6f4; }
+  header { background:var(--green); color:#fff; padding:18px 16px 16px; position:sticky; top:0; z-index:5; box-shadow:0 2px 6px rgba(0,0,0,.2); }
+  header h1 { margin:0; font-size:1.25rem; line-height:1.25; }
+  .progress { margin-top:8px; font-size:.85rem; opacity:.95; display:flex; align-items:center; gap:10px; }
+  .bar { flex:1; height:6px; background:rgba(255,255,255,.3); border-radius:3px; overflow:hidden; max-width:260px; }
+  .bar > div { height:100%; width:0; background:#fff; transition:width .3s; }
+  main { max-width:820px; margin:0 auto; padding:16px 12px 120px; }
+  .intro { background:#fff; border-left:4px solid var(--green); padding:12px 14px; border-radius:6px; margin-bottom:16px; }
+  .intro p { margin:.3em 0; }
+  .small { font-size:.85rem; color:var(--muted); }
+  h2.topic { color:var(--green); font-size:1.1rem; margin:28px 4px 10px; border-bottom:2px solid var(--green); padding-bottom:4px; }
+  .q { background:#fff; border:1px solid var(--line); border-radius:8px; padding:14px; margin:0 0 12px; }
+  .q.answered { border-left:4px solid var(--green); }
+  .qtag { font-size:.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:.03em; }
+  .qtext { font-weight:600; margin:2px 0 10px; }
+  .qtext .num { color:var(--green); margin-right:4px; }
+  .part { margin:10px 0 4px; }
+  .plabel { font-size:.92rem; font-weight:600; margin-bottom:4px; }
+  .opts { display:flex; flex-wrap:wrap; gap:6px; }
+  .opts label { display:flex; align-items:center; gap:6px; border:1px solid var(--line); border-radius:20px; padding:7px 12px; background:#fafbfa; cursor:pointer; font-size:.93rem; min-height:40px; }
+  .opts label:has(input:checked) { background:var(--green-lt); border-color:var(--green); }
+  .opts input { margin:0; width:18px; height:18px; accent-color:var(--green); }
+  textarea, input[type=text] { width:100%; font:inherit; border:1px solid #b9c2bc; border-radius:6px; padding:8px 10px; margin-top:6px; background:#fff; }
+  textarea { min-height:44px; resize:vertical; }
+  textarea:focus, input[type=text]:focus { outline:2px solid var(--green); outline-offset:0; }
+  .site { border-top:1px dashed var(--line); padding-top:8px; margin-top:8px; }
+  .site:first-child { border-top:0; margin-top:0; padding-top:0; }
+  .sitename { font-weight:600; font-size:.9rem; color:var(--green); margin-bottom:4px; }
+  .photo { display:flex; flex-direction:column; gap:4px; }
+  .note { background:#fff8e1; border:1px solid #f0d98a; border-radius:6px; padding:10px 12px; margin-bottom:12px; }
+  .actions { position:fixed; left:0; right:0; bottom:0; background:#fff; border-top:1px solid var(--line); padding:10px 12px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; z-index:5; box-shadow:0 -2px 6px rgba(0,0,0,.08); }
+  button { font:inherit; font-weight:600; border-radius:6px; padding:10px 16px; cursor:pointer; border:1px solid var(--green); background:#fff; color:var(--green); min-height:44px; }
+  button.primary { background:var(--green); color:#fff; }
+  button:disabled { opacity:.6; cursor:default; }
+  .topactions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:10px; }
+  .lastsent { font-size:.85rem; color:var(--muted); }
+  #status { width:100%; text-align:center; font-size:.85rem; color:var(--muted); }
+  @media (max-width:520px) { header h1 { font-size:1.05rem; } .actions { padding:8px; gap:6px; } .actions button { font-size:.9rem; padding:8px 6px; } #status { font-size:.78rem; } .opts label { flex:1 1 100%; border-radius:8px; } button { flex:1 1 45%; padding:10px 8px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>MSHA Training Videos - Questions for Nathan</h1>
+  <div class="progress"><div class="bar"><div id="barfill"></div></div><span id="progtext">0 answered</span></div>
+</header>
+<main>
+  <div class="intro">
+    <p>Nathan, thanks for helping with this. These are the site details I need so the Part 48 training videos match how Allen actually does things. Tap a choice where it fits, add notes in the boxes, and skip anything you'd rather talk through. <strong>- Jake</strong></p>
+    <p class="small">"Each site" = Boonesboro, Dix River, Clover Bottom #1 &amp; #2. Your answers save automatically on this device, so you can close the page and come back later. Press <strong>Save progress</strong> any time to send me what you have so far (it also sends automatically when you leave the page), and <strong>Submit final answers</strong> at the bottom when you're done.</p>
+    <div class="topactions"><button type="button" class="saveBtn">Save progress (send what I have)</button><span class="lastsent">Not sent to Jake yet.</span></div>
+  </div>
+
+  <form id="f" action="https://formsubmit.co/jcampbell325@gmail.com" method="POST" autocomplete="off">
+    <div class="q">
+      <div class="part"><div class="plabel">Your name</div><input type="text" name="answered_by" placeholder="Your name"></div>
+    </div>
+    <div id="questions"></div>
+    <h2 class="topic">Photo requests</h2>
+    <div class="note">Phone photos are fine. <strong>No upload needed here.</strong> Please email them to <a href="mailto:jcampbell325@gmail.com">jcampbell325@gmail.com</a> or text them to Jake. Tick each one once it's sent, and add a comment if you want.</div>
+    <div id="photos"></div>
+    <h2 class="topic">Anything else</h2>
+    <div class="q"><div class="part"><div class="plabel">Other comments for Jake (optional)</div><textarea name="general_comments" rows="3"></textarea></div></div>
+    <div class="q"><div class="plabel">Backup copy (optional)</div><p class="small" style="margin:4px 0 8px">If sending doesn't work, copy or download your answers and email/text them to Jake.</p>
+      <div class="opts" style="gap:8px"><button type="button" id="copyBtn">Copy all answers</button><button type="button" id="dlBtn">Download answers</button></div></div>
+    <div id="hidden"></div>
+  </form>
+</main>
+<div class="actions">
+  <button type="button" class="saveBtn">Save progress (send what I have)</button>
+  <button type="button" class="primary" id="submitBtn">Submit final answers</button>
+  <div id="status">Progress saves automatically on this device. <span class="lastsent">Not sent to Jake yet.</span></div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var OTHER = "Other / not sure";
+  var STORE = "nathan-msha-answers-v1";
+  var SITES3 = ["Boonesboro", "Dix River", "Clover Bottom (#1 & #2)"];
+  var SITES4 = ["Boonesboro", "Dix River", "Clover Bottom #1", "Clover Bottom #2"];
+
+  // Part types: text | radio | check | sites (checkbox of sites) | persite (per-site box, optional choices)
+  var TOPICS = [
+    { t: "Site layout and operations", qs: [
+      { tag: "M1 site walkthroughs", q: "In one sentence per site, what does the operation consist of: surface pit, underground mine, or both, and what main products?",
+        parts: [{ type: "persite", label: "Type of operation", radio: ["Surface pit", "Underground mine", "Both"], ph: "Main products / one-sentence description" }] },
+      { tag: "M1 site walkthroughs", q: "How is each site mined? (bench heights in the pit; room-and-pillar dimensions underground; who drills and blasts - Allen crew or contractor)",
+        parts: [{ type: "persite", label: "Drilling & blasting done by", radio: ["Allen crew", "Contractor", "Both / mixed"], ph: "Bench heights, room-and-pillar dimensions, other notes" }] },
+      { tag: "M1 site walkthroughs", q: "How do miners check in and out each shift - tag board, sign-in sheet, or both? Is there a separate check-in for going underground?",
+        parts: [{ type: "persite", label: "Shift check-in", check: ["Tag board", "Sign-in sheet", "Electronic / app", "Separate underground check-in"], ph: "Details" }] },
+      { tag: "M1 site walkthroughs", q: "What radio channels, call signs and emergency call words are used?",
+        parts: [{ type: "persite", ph: "Channels, call signs, emergency call words" }] },
+      { tag: "M11-1 Surface operations hazards", q: "Which sites run night shifts?",
+        parts: [{ type: "sites", none: "No sites run night shifts" }] },
+      { tag: "M11-1 Surface operations hazards", q: "Which sites have pumps, sumps or ponds where someone could fall into water, and what is Allen's life-jacket rule there?",
+        parts: [{ type: "sites", label: "Sites with water hazards", none: "None" },
+                { type: "radio", label: "Life-jacket rule", opts: ["Life jacket required wherever there is a danger of falling into water", "Life jacket or fall protection (tie-off), either one", "No written rule"] }] }
+    ]},
+    { t: "Haulage, traffic and loading", qs: [
+      { tag: "M12-1 Haul truck & tri-axle", q: "Which sites use tri-axle road trucks to haul inside the pit (not just from the scale to the road)?",
+        parts: [{ type: "sites", none: "None - road trucks stay between scale and road" }] },
+      { tag: "M12-1 Haul truck & tri-axle", q: "What is Allen's rule for pickups on haul roads - whip flag, strobe light, radio call before approaching a haul truck, required channel?",
+        parts: [{ type: "check", label: "Required (check all that apply)", opts: ["Whip flag", "Strobe / beacon light", "Radio call before approaching a haul truck", "Specific radio channel", "Headlights on"], ph: "Which channel, other rules" }] },
+      { tag: "M12-1 Haul truck & tri-axle", q: "What is the name of the pre-shift equipment inspection form, and where is it turned in?",
+        parts: [{ type: "text", label: "Form name" },
+                { type: "radio", label: "Turned in to / kept", opts: ["Supervisor / foreman", "Shop / maintenance office", "Scale house / office", "Electronic / app", "Kept in the equipment"] }] },
+      { tag: "M12-1 Haul truck & tri-axle / M1 walkthroughs", q: "What are the posted speed limits and right-of-way rules on each site's haul roads? Does any pit run left-hand traffic? Can you share a traffic map per site?",
+        parts: [{ type: "persite", ph: "Speed limits, right-of-way rules" },
+                { type: "radio", label: "Left-hand traffic?", opts: ["No - all right-hand traffic", "Yes, at least one pit (say which below)"] },
+                { type: "radio", label: "Traffic map", opts: ["Yes - I'll email/text maps", "No maps exist yet"] }] },
+      { tag: "M12-2 Wheel loader", q: "While being loaded, must truck drivers stay in the cab? If not, where must they stand?",
+        parts: [{ type: "radio", opts: ["Must stay in the cab", "May get out - must stand in a set safe spot (describe below)", "Depends on site / truck type"] }] },
+      { tag: "M12-2 Wheel loader", q: "What loader makes/models are used at each site? (so the drawings match)",
+        parts: [{ type: "persite", ph: "e.g. make and model" }] },
+      { tag: "M9-1 Electrical scenarios", q: "What is Allen's rule for dumping or loading near overhead power lines at each site (any locations to call out)?",
+        parts: [{ type: "text", label: "Rule" }, { type: "persite", label: "Locations to call out", ph: "Power-line locations at this site" }] }
+    ]},
+    { t: "Plant and shop", qs: [
+      { tag: "M12-3 Crusher & plant", q: "Which conveyors at each plant have pull-cords or emergency stop switches?",
+        parts: [{ type: "persite", ph: "Conveyors with pull-cords / e-stops" }] },
+      { tag: "M12-3 Crusher & plant", q: "What is Allen's approved method for clearing a bridged primary crusher (rock breaker, hoist, other)?",
+        parts: [{ type: "check", label: "Approved method(s)", opts: ["Hydraulic rock breaker", "Hoist / crane", "Excavator", "Lock out, then bar by hand", "Secondary blasting"] }] },
+      { tag: "M12-3 Crusher & plant", q: "Which plant areas require hearing protection and/or respirators at each site?",
+        parts: [{ type: "persite", ph: "Hearing protection areas / respirator areas" }] },
+      { tag: "M12-5 Shop & maintenance", q: "Does Allen use a hot-work permit? How long is the fire watch after welding/cutting?",
+        parts: [{ type: "radio", label: "Hot-work permit", opts: ["Yes - written permit", "No permit, but a set procedure", "No"] },
+                { type: "radio", label: "Fire watch after welding/cutting", opts: ["30 minutes", "60 minutes", "No set time"] }] }
+    ]},
+    { t: "Drilling and blasting", qs: [
+      { tag: "M12-4 Driller / blaster's helper", q: "Confirm: Clover Bottom has the surface drill-and-blast crew. Do other sites use a blasting contractor?",
+        parts: [{ type: "radio", label: "Clover Bottom has the surface drill-and-blast crew", opts: ["Yes, correct", "No"] },
+                { type: "persite", label: "Who blasts at this site", radio: ["Allen crew", "Blasting contractor", "No blasting"], ph: "Contractor name / notes" }] },
+      { tag: "M12-4 Driller / blaster's helper", q: "What is the minimum setback of the drill from the crest, and when must people tie off (e.g., front-row holes)?",
+        parts: [{ type: "text", label: "Minimum drill setback from crest" },
+                { type: "check", label: "Tie-off required when", opts: ["Drilling / loading front-row holes", "Within a set distance of the crest", "Anytime there is a fall hazard"] }] },
+      { tag: "M12-4 Driller / blaster's helper", q: "What is the blast warning-signal sequence (siren/horn pattern) and the guard procedure?",
+        parts: [{ type: "text", label: "Warning-signal sequence" }, { type: "text", label: "Guard procedure" }] },
+      { tag: "M12-4 Driller / blaster's helper", q: "What are Allen's radio and lightning/electrical-storm procedures on a loaded shot?",
+        parts: [{ type: "check", label: "Procedures (check all that apply)", opts: ["Radios / phones kept a set distance from loaded holes", "Clear and guard the area when a storm approaches", "Lightning detector or weather app used", "Non-electric initiation, so radios are OK"], ph: "Distances, details" }] }
+    ]},
+    { t: "Underground emergencies, fire and escape", qs: [
+      { tag: "M6-1 Fire warning & stench gas", q: "At each underground mine, how is stench gas released - into the intake fan, the compressed-air line, or both?",
+        parts: [{ type: "persite", radio: ["Intake fan", "Compressed-air line", "Both", "No underground mine here"], ph: "Notes" }] },
+      { tag: "M6-1 Fire warning & stench gas", q: "Besides stench gas, what other underground warnings are used (radio, phone page, strobe lights, messenger)?",
+        parts: [{ type: "check", opts: ["Radio", "Phone page", "Strobe lights", "Messenger"] }] },
+      { tag: "M6-1 Fire warning & stench gas", q: "Is there a stench-gas sample/sniff card used in training?",
+        parts: [{ type: "radio", opts: ["Yes", "No", "No, but we could get one"] }] },
+      { tag: "M6-1 Fire warning & stench gas", q: "What is the surface fire-warning signal at each site?",
+        parts: [{ type: "persite", check: ["Siren", "Air horn", "Radio call", "Verbal / messenger"], ph: "Pattern / details" }] },
+      { tag: "M6-2 Fire extinguishers", q: "What extinguisher types and sizes are on site and on equipment? How is hands-on extinguisher training done (live-fire pan, simulator, vendor)?",
+        parts: [{ type: "text", label: "Types and sizes (site / equipment)" },
+                { type: "check", label: "Hands-on training method", opts: ["Live-fire pan", "Simulator (laser / digital)", "Vendor or fire department", "Classroom / discussion only"] }] },
+      { tag: "M6-3 Abandoned areas & barricading", q: "Can you provide maps showing abandoned/worked-out and sealed areas at each underground mine (for the online map exercises)?",
+        parts: [{ type: "radio", opts: ["Yes - I'll email the maps", "Yes, for some mines (say which below)", "No, can't share these"] }] },
+      { tag: "M6-3 Abandoned areas & barricading", q: "Does any Allen mine have a designated refuge? Where are barricading materials stored?",
+        parts: [{ type: "radio", label: "Designated refuge", opts: ["Yes (say where below)", "No"] },
+                { type: "persite", label: "Barricading materials stored at", ph: "Location" }] },
+      { tag: "M6-3 Abandoned areas & barricading", q: "What signaling procedure should barricaded miners use (e.g., tapping pattern)?",
+        parts: [{ type: "text" }] },
+      { tag: "M10-4 Heat illness & drills", q: "What is the procedure for getting an injured miner out from underground (who calls, who meets EMS at the portal, stretcher route)?",
+        parts: [{ type: "text", label: "Who calls" }, { type: "text", label: "Who meets EMS at the portal" }, { type: "text", label: "Stretcher route / other steps" }] },
+      { tag: "M3-1 W65 care & inspection", q: "Who performs the 90-day W65 weigh check at each site, and where is it logged?",
+        parts: [{ type: "persite", ph: "Who does it / where it's logged" }] },
+      { tag: "M3-1 W65 care & inspection", q: "The online course has no instructor. Who does the hands-on W65 inspection/donning practical with new underground miners, and where is it recorded?",
+        parts: [{ type: "check", label: "Who does the practical", opts: ["Nathan / safety manager", "Site supervisor / foreman", "Experienced miner / mentor", "Outside trainer"] },
+                { type: "text", label: "Where it's recorded" }] },
+      { tag: "M10 First aid / M6-2 Extinguishers", q: "Who delivers the hands-on parts (splinting, burn dressing, eyewash use, extinguisher use) now that the course is self-paced, and when?",
+        parts: [{ type: "check", label: "Who", opts: ["Nathan / safety manager", "Site supervisor / foreman", "Outside trainer / vendor"] },
+                { type: "radio", label: "When", opts: ["Same day as the online course", "Within the first week", "At a scheduled group session"] }] }
+    ]},
+    { t: "First aid", qs: [
+      { tag: "M10-1/M10-2 First aid", q: "Which first-aid curriculum does Allen use for hands-on training (Red Cross, AHA, NSC, other)? This decides wording such as burn cooling time (10 vs 20 minutes).",
+        parts: [{ type: "radio", opts: ["American Red Cross", "American Heart Association (AHA)", "National Safety Council (NSC)", "HSI / Medic First Aid"] }] },
+      { tag: "M10-1/M10-2/M10-3 First aid", q: "Where are first-aid kits, stretchers, blankets, burn kits and eyewash stations at each site? Are eyewashes plumbed or bottles?",
+        parts: [{ type: "persite", label: "Eyewash type", radio: ["Plumbed", "Bottles", "Both"], ph: "Locations: first-aid kits, stretchers, blankets, burn kits, eyewash" }] },
+      { tag: "M10-4 Heat illness", q: "Does Allen have a heat-illness plan (water/rest schedule, acclimatization for new workers)?",
+        parts: [{ type: "radio", opts: ["Yes - written plan", "Informal practice, nothing written", "No"] }] }
+    ]},
+    { t: "HazCom", qs: [
+      { tag: "M12-6 HazCom", q: "Where is the written HazCom program kept at each site, and who is responsible for it (name/role)?",
+        parts: [{ type: "persite", ph: "Where kept / who is responsible" }] },
+      { tag: "M12-6 HazCom", q: "Where is the paper SDS binder at each site?",
+        parts: [{ type: "persite", ph: "Location" }] },
+      { tag: "M12-6 HazCom", q: "What hazardous chemicals are stored at each site (diesel, oils, ANFO, other)? Can Allen's own supplier SDSs replace the reference copies on the training site?",
+        parts: [{ type: "check", label: "Chemicals stored (any site)", opts: ["Diesel", "Gasoline", "Motor / hydraulic oils", "Grease", "Antifreeze / coolant", "ANFO", "Emulsion / packaged explosives", "Solvents / degreasers", "Welding gases"] },
+                { type: "persite", label: "Per-site notes", ph: "What's stored here" },
+                { type: "radio", label: "Use Allen's own supplier SDSs on the training site?", opts: ["Yes - I'll send them", "No - keep the reference copies"] }] }
+    ]},
+    { t: "Rights, organization and rules", qs: [
+      { tag: "M2-1 Mine Act & miners' reps", q: "Does any Allen site currently have a designated miners' representative?",
+        parts: [{ type: "radio", opts: ["Yes (say which site below)", "No"] }] },
+      { tag: "M2-1 Mine Act & miners' reps", q: "Please confirm the line of authority (org chart) per site.",
+        parts: [{ type: "persite", ph: "e.g. Superintendent > Foreman > ..." }] },
+      { tag: "M2-1 Mine Act & miners' reps", q: "What is the name of Allen's operator safety rules document/handbook?",
+        parts: [{ type: "text" }] },
+      { tag: "M2-1 Mine Act & miners' reps", q: "What is Allen's hazard-reporting procedure and form?",
+        parts: [{ type: "check", label: "How hazards are reported", opts: ["Tell supervisor verbally", "Written hazard-report form", "Workplace exam book", "Phone / app"] },
+                { type: "text", label: "Form name / procedure" }] },
+      { tag: "M1-5 Emergency card", q: "OK to show names (not just roles) of mine command on screen? Which mine rescue stations apply to each site? Clover Bottom's MSHA ID?",
+        parts: [{ type: "radio", label: "Names on screen", opts: ["Yes, names are OK", "Roles only"] },
+                { type: "persite", label: "Mine rescue station(s)", ph: "Rescue station" },
+                { type: "text", label: "Clover Bottom MSHA ID(s)" }] }
+    ]}
+  ];
+
+  var PHOTOS = [
+    "Allen's issued MSA W65 on a belt: front, side on belt, bottom label (3 photos)",
+    "Stench-gas canister/injection point at each underground mine",
+    "Loader(s) in use at each site",
+    "Primary jaw crusher and cone crusher at each plant",
+    "Clover Bottom drill rig",
+    "A typical shop bay (with lift/body prop/tire cage if possible)",
+    "An underground heading at each underground mine",
+    "Aerial/drone or overview photos of each site (for walkthrough maps)",
+    "Fire extinguisher as mounted on mobile equipment",
+    "First-aid kit contents and eyewash station"
+  ];
+
+  function el(tag, attrs, kids) {
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs) { if (k === "text") e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    (kids || []).forEach(function (c) { if (c) e.appendChild(c); });
+    return e;
+  }
+  function optGroup(name, type, opts) {
+    var box = el("div", { "class": "opts" });
+    opts.concat([OTHER]).forEach(function (o) {
+      var inp = el("input", { type: type, name: name, value: o });
+      box.appendChild(el("label", null, [inp, document.createTextNode(o)]));
+    });
+    return box;
+  }
+  function ta(name, ph) { return el("textarea", { name: name, rows: "2", placeholder: ph || "Answer / notes" }); }
+
+  var qRoot = document.getElementById("questions");
+  var n = 0, QLIST = [];
+  TOPICS.forEach(function (topic) {
+    qRoot.appendChild(el("h2", { "class": "topic", text: topic.t }));
+    topic.qs.forEach(function (Q) {
+      n++; var id = "q" + n; Q.n = n; Q.id = id; QLIST.push(Q);
+      var card = el("div", { "class": "q", id: id });
+      card.appendChild(el("div", { "class": "qtag", text: Q.tag }));
+      var qt = el("div", { "class": "qtext" }, [el("span", { "class": "num", text: n + "." }), document.createTextNode(Q.q)]);
+      card.appendChild(qt);
+      Q.parts.forEach(function (p, i) {
+        var pn = id + "_p" + (i + 1); p.name = pn;
+        var part = el("div", { "class": "part" });
+        if (p.label) part.appendChild(el("div", { "class": "plabel", text: p.label }));
+        if (p.type === "text") {
+          part.appendChild(ta(pn + "_text", p.ph));
+        } else if (p.type === "radio" || p.type === "check") {
+          part.appendChild(optGroup(pn + "_choice", p.type === "radio" ? "radio" : "checkbox", p.opts));
+          part.appendChild(ta(pn + "_text", p.ph || "Details / other (optional)"));
+        } else if (p.type === "sites") {
+          part.appendChild(optGroup(pn + "_choice", "checkbox", SITES4.concat(p.none ? [p.none] : [])));
+          part.appendChild(ta(pn + "_text", p.ph || "Details (optional)"));
+        } else if (p.type === "persite") {
+          SITES3.forEach(function (s, si) {
+            var sn = pn + "_s" + (si + 1);
+            var sd = el("div", { "class": "site" }, [el("div", { "class": "sitename", text: s })]);
+            if (p.radio) sd.appendChild(optGroup(sn + "_choice", "radio", p.radio));
+            if (p.check) sd.appendChild(optGroup(sn + "_choice", "checkbox", p.check));
+            sd.appendChild(ta(sn + "_text", p.ph));
+            part.appendChild(sd);
+          });
+        }
+        card.appendChild(part);
+      });
+      qRoot.appendChild(card);
+    });
+  });
+
+  var pRoot = document.getElementById("photos");
+  PHOTOS.forEach(function (ph, i) {
+    var name = "photo" + (i + 1);
+    var card = el("div", { "class": "q photo" });
+    card.appendChild(el("div", { "class": "qtext" }, [el("span", { "class": "num", text: "P" + (i + 1) + "." }), document.createTextNode(ph)]));
+    var box = el("div", { "class": "opts" });
+    box.appendChild(el("label", null, [el("input", { type: "checkbox", name: name + "_sent", value: "Sent" }), document.createTextNode("Sent")]));
+    box.appendChild(el("label", null, [el("input", { type: "checkbox", name: name + "_na", value: "Can't get this one" }), document.createTextNode("Can't get this one")]));
+    card.appendChild(box);
+    card.appendChild(el("input", { type: "text", name: name + "_comment", placeholder: "Comment (optional)" }));
+    pRoot.appendChild(card);
+  });
+
+  var form = document.getElementById("f");
+
+  // ---- save / restore ----
+  function collect() {
+    var data = {};
+    Array.prototype.forEach.call(form.elements, function (e) {
+      if (!e.name || e.type === "hidden") return;
+      if (e.type === "radio" || e.type === "checkbox") {
+        if (e.checked) (data[e.name] = data[e.name] || []).push(e.value);
+      } else if (e.value.trim() !== "") data[e.name] = e.value;
+    });
+    return data;
+  }
+  function restore() {
+    var raw; try { raw = localStorage.getItem(STORE); } catch (x) { return; }
+    if (!raw) return;
+    var data; try { data = JSON.parse(raw); } catch (x) { return; }
+    Array.prototype.forEach.call(form.elements, function (e) {
+      if (!e.name || !(e.name in data)) return;
+      if (e.type === "radio" || e.type === "checkbox") e.checked = data[e.name].indexOf(e.value) !== -1;
+      else e.value = data[e.name];
+    });
+  }
+  var statusEl = document.getElementById("status");
+  function setStatus(t) { statusEl.textContent = t; }
+  var saveTimer;
+  function save() {
+    try { localStorage.setItem(STORE, JSON.stringify(collect())); setStatus("Saved on this device " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + "."); }
+    catch (x) { setStatus("Couldn't autosave in this browser - use Copy or Download before closing."); }
+  }
+  function updateProgress() {
+    var d = collect(), done = 0;
+    QLIST.forEach(function (Q) {
+      var has = Object.keys(d).some(function (k) { return k.indexOf(Q.id + "_") === 0; });
+      document.getElementById(Q.id).classList.toggle("answered", has);
+      if (has) done++;
+    });
+    document.getElementById("barfill").style.width = (100 * done / QLIST.length) + "%";
+    document.getElementById("progtext").textContent = done + " of " + QLIST.length + " questions answered";
+  }
+  form.addEventListener("input", function () { updateProgress(); clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); });
+  form.addEventListener("change", function () { updateProgress(); save(); });
+
+  // ---- format answers ----
+  function fmtPart(d, base) {
+    var out = [];
+    if (d[base + "_choice"]) out.push(d[base + "_choice"].join("; "));
+    if (d[base + "_text"]) out.push((out.length ? "Notes: " : "") + d[base + "_text"]);
+    return out.join(" | ");
+  }
+  function answersList() {
+    var d = collect(), rows = [];
+    rows.push(["Answered by", d.answered_by || ""]);
+    QLIST.forEach(function (Q) {
+      var lines = [];
+      Q.parts.forEach(function (p) {
+        var prefix = p.label ? p.label + ": " : "";
+        if (p.type === "persite") {
+          var sl = [];
+          SITES3.forEach(function (s, si) { var v = fmtPart(d, p.name + "_s" + (si + 1)); if (v) sl.push("  - " + s + ": " + v); });
+          if (sl.length) lines.push((p.label ? p.label + ":\n" : "") + sl.join("\n"));
+        } else {
+          var v = fmtPart(d, p.name); if (v) lines.push(prefix + v);
+        }
+      });
+      rows.push([Q.n + ". " + Q.q, lines.join("\n")]);
+    });
+    PHOTOS.forEach(function (ph, i) {
+      var b = "photo" + (i + 1), bits = [];
+      if (d[b + "_sent"]) bits.push("Sent");
+      if (d[b + "_na"]) bits.push("Can't get this one");
+      if (d[b + "_comment"]) bits.push("Comment: " + d[b + "_comment"]);
+      rows.push(["P" + (i + 1) + ". " + ph, bits.join(" | ")]);
+    });
+    rows.push(["Other comments", d.general_comments || ""]);
+    return rows;
+  }
+  function answersText() {
+    return "MSHA Training Videos - Answers from Nathan\n" + new Date().toLocaleString() + "\n\n" +
+      answersList().map(function (r) { return r[0] + "\n" + (r[1] ? r[1] : "(no answer)") + "\n"; }).join("\n");
+  }
+
+  // ---- copy / download ----
+  document.getElementById("copyBtn").addEventListener("click", function () {
+    var txt = answersText();
+    function fallback() {
+      var t = el("textarea"); t.value = txt; t.style.position = "fixed"; t.style.opacity = "0"; document.body.appendChild(t); t.select();
+      try { document.execCommand("copy"); setStatus("Answers copied - paste them into a text or email to Jake."); } catch (x) { setStatus("Copy failed - use Download instead."); }
+      document.body.removeChild(t);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(function () { setStatus("Answers copied - paste them into a text or email to Jake."); }, fallback);
+    else fallback();
+  });
+  document.getElementById("dlBtn").addEventListener("click", function () {
+    var blob = new Blob([answersText()], { type: "text/plain" });
+    var a = el("a", { href: URL.createObjectURL(blob), download: "Nathan-MSHA-video-answers.txt" });
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setStatus("Downloaded. You can email the file to jcampbell325@gmail.com.");
+  });
+
+  // ---- sending (FormSubmit) ----
+  var FORM_URL = "https://formsubmit.co/jcampbell325@gmail.com";
+  var AJAX_URL = "https://formsubmit.co/ajax/jcampbell325@gmail.com";
+  var META = STORE + "-sent";          // { hash, time }
+  var AUTO_MIN_MS = 3 * 60 * 1000;     // auto-send at most once every 3 minutes
+  function getMeta() { try { return JSON.parse(localStorage.getItem(META)) || {}; } catch (x) { return {}; } }
+  function setMeta(m) { try { localStorage.setItem(META, JSON.stringify(m)); } catch (x) {} }
+  var memMeta = getMeta(), lastAutoTry = 0;
+  function hashNow() { return JSON.stringify(collect()); }
+  function countAnswered() {
+    var d = collect();
+    return QLIST.filter(function (Q) { return Object.keys(d).some(function (k) { return k.indexOf(Q.id + "_") === 0; }); }).length;
+  }
+  function hasAnything() { return Object.keys(collect()).length > 0; }
+  function unsent() { return hasAnything() && hashNow() !== memMeta.hash; }
+  function fmtTime(t) { return new Date(t).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" }); }
+  function showLastSent() {
+    var txt = memMeta.time ? "Last sent to Jake: " + fmtTime(memMeta.time) + (memMeta.final ? " (final)" : " (progress)") + (unsent() ? " - newer changes not sent yet" : "") : "Not sent to Jake yet.";
+    Array.prototype.forEach.call(document.querySelectorAll(".lastsent"), function (e) { e.textContent = txt; });
+  }
+  function payload(kind) {
+    var rows = answersList(), done = countAnswered(), M = QLIST.length;
+    var p = new URLSearchParams();
+    p.append("_subject", kind === "final" ? "Nathan - MSHA video answers" :
+      "Nathan - MSHA video answers (partial, " + done + " of " + M + " answered)");
+    p.append("_captcha", "false");
+    p.append("_template", "table");
+    p.append("Status", kind === "final" ? "FINAL submission" : (kind === "auto" ? "Partial - auto-sent when page was closed/hidden" : "Partial - Save progress button"));
+    p.append("Questions answered", done + " of " + M);
+    var used = {};
+    rows.forEach(function (r) {
+      if (kind !== "final" && !r[1]) return;          // partial: only answered items
+      var key = r[0].length > 90 ? r[0].slice(0, 87) + "..." : r[0];
+      while (used[key]) key += " ";
+      used[key] = 1;
+      p.append(key, r[1] || "-");
+    });
+    p.append("All answers (plain text)", answersText());
+    return p;
+  }
+  function markSent(h, final) { memMeta = { hash: h, time: Date.now(), final: !!final }; setMeta(memMeta); showLastSent(); }
+  // Simple (no-preflight) POST: urlencoded body + Accept header.
+  function ajaxSend(kind) {
+    var h = hashNow();
+    return fetch(AJAX_URL, { method: "POST", headers: { "Accept": "application/json" }, body: payload(kind), keepalive: kind === "auto" })
+      .then(function (r) { return r.json().catch(function () { return { success: r.ok ? "true" : "false" }; }); })
+      .then(function (j) {
+        var ok = j && (j.success === true || j.success === "true");
+        if (ok) markSent(h, kind === "final");
+        return { ok: ok, msg: j && j.message };
+      });
+  }
+  function autoSend() {
+    if (!unsent()) return;
+    var now = Date.now();
+    if (now - lastAutoTry < AUTO_MIN_MS || (memMeta.time && now - memMeta.time < AUTO_MIN_MS)) return;
+    lastAutoTry = now;
+    var h = hashNow(), body = payload("auto");
+    var sent = false;
+    try {
+      sent = fetch(AJAX_URL, { method: "POST", headers: { "Accept": "application/json" }, body: body, keepalive: true })
+        .then(function (r) { if (r.ok) markSent(h, false); }, function () {}) && true;
+    } catch (x) { sent = false; }
+    if (!sent && navigator.sendBeacon) { if (navigator.sendBeacon(AJAX_URL, body)) markSent(h, false); }
+  }
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") { save(); autoSend(); } });
+  window.addEventListener("pagehide", function () { save(); autoSend(); });
+
+  function busy(on) { Array.prototype.forEach.call(document.querySelectorAll(".saveBtn, #submitBtn"), function (b) { b.disabled = on; }); }
+  Array.prototype.forEach.call(document.querySelectorAll(".saveBtn"), function (btn) {
+    btn.addEventListener("click", function () {
+      if (!hasAnything()) { setStatus("Nothing to send yet - answer a question first."); return; }
+      save(); busy(true); setStatus("Sending what you have so far...");
+      ajaxSend("partial").then(function (r) {
+        busy(false);
+        setStatus(r.ok ? "Progress sent to Jake (" + countAnswered() + " of " + QLIST.length + " answered). Keep going any time." :
+          "Couldn't send right now" + (r.msg ? " (" + r.msg + ")" : "") + ". Your answers are still saved here - try again, or use Copy / Download.");
+        showLastSent();
+      }, function () { busy(false); setStatus("No connection? Your answers are still saved here - try again later, or use Copy / Download."); });
+    });
+  });
+
+  // Final: try AJAX; if the network call fails outright, fall back to a classic form POST.
+  document.getElementById("submitBtn").addEventListener("click", function () {
+    var done = countAnswered();
+    if (!confirm("Submit your final answers to Jake now? (" + done + " of " + QLIST.length + " questions answered. Your answers stay saved on this device too.)")) return;
+    save(); busy(true); setStatus("Sending final answers...");
+    ajaxSend("final").then(function (r) {
+      busy(false);
+      setStatus(r.ok ? "Thanks, Nathan - your final answers were sent to Jake." :
+        "Couldn't send right now" + (r.msg ? " (" + r.msg + ")" : "") + ". Your answers are still saved here - try again, or use Copy / Download.");
+      showLastSent();
+    }, function () {
+      var h = document.getElementById("hidden"); h.innerHTML = "";
+      payload("final").forEach(function (v, k) { h.appendChild(el("input", { type: "hidden", name: k, value: v })); });
+      if (/^https?:/.test(location.protocol)) h.appendChild(el("input", { type: "hidden", name: "_next", value: location.href.split("#")[0] + "#sent" }));
+      Array.prototype.forEach.call(form.elements, function (e) { if (e.type !== "hidden") e.disabled = true; });
+      markSent(hashNow(), true);
+      form.action = FORM_URL; form.submit();
+    });
+  });
+  form.addEventListener("change", showLastSent);
+  form.addEventListener("input", function () { clearTimeout(window.__ls); window.__ls = setTimeout(showLastSent, 500); });
+
+  restore();
+  updateProgress();
+  showLastSent();
+  if (location.hash === "#sent") setStatus("Thanks, Nathan - your answers were sent to Jake. They're still saved here if you want to change anything and send again.");
+})();
+</script>
+</body>
+</html>
