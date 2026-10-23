@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="data:,">
-<title>MSHA Training Videos - Questions for Nathan</title>
+<title>MSHA Training Videos - Round 2 Questions for Nathan</title>
 <style>
   :root { --green:#215732; --green-lt:#e8f0ea; --ink:#1d1d1d; --muted:#5b6670; --line:#d5dbd7; }
   * { box-sizing:border-box; }
@@ -47,50 +47,104 @@
   .lastsent { font-size:.85rem; color:var(--muted); }
   #status { width:100%; text-align:center; font-size:.85rem; color:var(--muted); }
   @media (max-width:520px) { header h1 { font-size:1.05rem; } .actions { padding:8px; gap:6px; } .actions button { font-size:.9rem; padding:8px 6px; } #status { font-size:.78rem; } .opts label { flex:1 1 100%; border-radius:8px; } button { flex:1 1 45%; padding:10px 8px; } }
+  .round { background:var(--green); color:#fff; border-radius:8px; padding:10px 14px; margin:18px 0 6px; font-size:1.15rem; font-weight:700; }
+  .round .small { color:#e8f0ea; font-weight:400; }
+  details.r1 { margin-top:28px; }
+  details.r1 > summary { cursor:pointer; list-style:none; background:#fff; border:2px solid var(--green); color:var(--green); border-radius:8px; padding:12px 14px; font-weight:700; }
+  details.r1 > summary::-webkit-details-marker { display:none; }
+  details.r1 > summary:before { content:"\25B8  "; }
+  details.r1[open] > summary:before { content:"\25BE  "; }
+  fieldset#r1set { border:0; margin:0; padding:0; min-width:0; }
+  fieldset#r1set:disabled .q { background:#f7f8f7; }
+  fieldset#r1set:disabled textarea, fieldset#r1set:disabled input[type=text] { background:#f2f4f2; color:#333; }
+  .r1bar { position:sticky; top:84px; z-index:4; background:#fff8e1; border:1px solid #f0d98a; border-radius:6px; padding:8px 12px; margin:10px 0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .upcard input[type=file] { width:100%; margin:6px 0; font:inherit; }
+  .upcard ul { margin:6px 0; padding-left:20px; font-size:.9rem; }
+  #upStatus { font-size:.9rem; margin-top:6px; color:var(--green); font-weight:600; }
+  #upLog { white-space:pre-wrap; font-size:.82rem; color:var(--muted); margin-top:6px; }
 </style>
 </head>
 <body>
 <header>
-  <h1>MSHA Training Videos - Questions for Nathan</h1>
-  <div class="progress"><div class="bar"><div id="barfill"></div></div><span id="progtext">0 answered</span></div>
+  <h1>MSHA Training Videos - Round 2 Questions for Nathan</h1>
+  <div class="progress"><div class="bar"><div id="barfill"></div></div><span id="progtext">Round 2: 0 answered</span></div>
 </header>
 <main>
-  <div class="intro">
-    <p>Nathan, thanks for helping with this. These are the site details I need so the Part 48 training videos match how Allen actually does things. Tap a choice where it fits, add notes in the boxes, and skip anything you'd rather talk through. <strong>- Jake</strong></p>
-    <p class="small">"Each site" = Boonesboro, Dix River, Clover Bottom #1 &amp; #2. Your answers save automatically on this device, so you can close the page and come back later. Press <strong>Save progress</strong> any time to send me what you have so far (it also sends automatically when you leave the page), and <strong>Submit final answers</strong> at the bottom when you're done.</p>
-    <div class="topactions"><button type="button" class="saveBtn">Save progress (send what I have)</button><span class="lastsent">Not sent to Jake yet.</span></div>
-  </div>
-
   <form id="f" action="https://formsubmit.co/jcampbell325@gmail.com" method="POST" autocomplete="off">
+  <div class="round">Round 2 <span class="small">- start here</span></div>
+  <div class="intro">
+    <p>Nathan, thanks a lot for all the round 1 answers - they made a big difference. This short Round 2 is the last few details and photos I need to finish the next batch of training videos (escapeway maps, SDS, noise, and spot-the-hazard photos). Skip anything you'd rather talk through. <strong>- Jake</strong></p>
+    <p class="small">"Each site" = Boonesboro, Dix River, Clover Bottom #1 &amp; #2. Your answers save automatically on this device, so you can close the page and come back later. Press <strong>Save progress</strong> any time to send me what you have so far (it also sends automatically when you leave the page), and <strong>Submit final answers</strong> at the bottom when you're done. Your round 1 answers are further down if you want to correct anything.</p>
+    <div class="topactions"><button type="button" class="saveBtn">Save progress (send what I have)</button><span class="lastsent">Round 2 not sent to Jake yet.</span></div>
+  </div>
     <div class="q">
       <div class="part"><div class="plabel">Your name</div><input type="text" name="answered_by" placeholder="Your name"></div>
     </div>
-    <div id="questions"></div>
-    <h2 class="topic">Photo requests</h2>
-    <div class="note">Phone photos are fine. <strong>No upload needed here.</strong> Please email them to <a href="mailto:jcampbell325@gmail.com">jcampbell325@gmail.com</a> or text them to Jake. Tick each one once it's sent, and add a comment if you want.</div>
-    <div id="photos"></div>
+    <div id="r2questions"></div>
+    <h2 class="topic">Photos, maps and SDS</h2>
+    <div class="note">Phone photos are fine. You can <strong>upload them right here</strong> (box below), or text/email them to Jake at <a href="mailto:jcampbell325@gmail.com">jcampbell325@gmail.com</a> - whichever is easier. Tick each item when it's done.</div>
+    <div id="r2photos"></div>
+    <div class="q upcard" id="upcard">
+      <div class="qtext"><span class="num">Upload</span> Send photos, maps or an SDS (PDF) to Jake</div>
+      <p class="small" style="margin:0 0 8px">Pick up to 10 files at a time, under 9 MB total (big phone photos are shrunk automatically). Send more batches if you need to. Round 1 photo requests (P1-P10, below) can go here too.</p>
+      <div class="plabel">What's in this batch? (optional)</div>
+      <div class="opts" id="upCats">
+        <label><input type="checkbox" value="Escapeway maps">Escapeway maps</label>
+        <label><input type="checkbox" value="SDS">SDS</label>
+        <label><input type="checkbox" value="Plant / pit / shop working places">Plant / pit / shop working places</label>
+        <label><input type="checkbox" value="Landmarks">Landmarks</label>
+        <label><input type="checkbox" value="Cable / splice">Cable / splice</label>
+        <label><input type="checkbox" value="Dust controls">Dust controls</label>
+        <label><input type="checkbox" value="Round 1 photo requests (P1-P10)">Round 1 photo requests (P1-P10)</label>
+      </div>
+      <input type="text" id="upNote" placeholder="Which site / what the photos show (optional)">
+      <div id="upPick"><input type="file" id="upFiles" multiple accept="image/*,application/pdf,.pdf"></div>
+      <ul id="upList"></ul>
+      <button type="button" class="primary" id="upBtn" disabled>Upload these files</button>
+      <div id="upStatus"></div>
+      <div id="upLog"></div>
+    </div>
     <h2 class="topic">Anything else</h2>
-    <div class="q"><div class="part"><div class="plabel">Other comments for Jake (optional)</div><textarea name="general_comments" rows="3"></textarea></div></div>
+    <div class="q"><div class="part"><div class="plabel">Other comments for Jake (optional)</div><textarea name="r2_comments" rows="3"></textarea></div></div>
     <div class="q"><div class="plabel">Backup copy (optional)</div><p class="small" style="margin:4px 0 8px">If sending doesn't work, copy or download your answers and email/text them to Jake.</p>
       <div class="opts" style="gap:8px"><button type="button" id="copyBtn">Copy all answers</button><button type="button" id="dlBtn">Download answers</button></div></div>
+
+    <details class="r1" id="r1">
+      <summary>Round 1 (already answered - thank you) - tap to review or correct</summary>
+      <div class="r1bar"><button type="button" id="r1edit">Correct an answer (unlock round 1)</button><span class="small" id="r1hint">Locked (read-only).</span></div>
+      <p class="small">These are the answers you already sent. Questions 29 and 41-44 are asked again in Round 2 above. If you change anything here, the change is sent to Jake along with Round 2.</p>
+      <fieldset id="r1set" disabled>
+        <div id="questions"></div>
+        <h2 class="topic">Round 1 photo requests</h2>
+        <div class="note">You can upload these in the upload box above, or email/text them to Jake. Tick each one once it's sent.</div>
+        <div id="photos"></div>
+        <h2 class="topic">Round 1 comments</h2>
+        <div class="q"><div class="part"><div class="plabel">Other comments for Jake (round 1)</div><textarea name="general_comments" rows="3"></textarea></div></div>
+      </fieldset>
+    </details>
     <div id="hidden"></div>
   </form>
+  <iframe name="upframe" id="upframe" title="upload" style="display:none" src="about:blank"></iframe>
 </main>
 <div class="actions">
   <button type="button" class="saveBtn">Save progress (send what I have)</button>
   <button type="button" class="primary" id="submitBtn">Submit final answers</button>
-  <div id="status">Progress saves automatically on this device. <span class="lastsent">Not sent to Jake yet.</span></div>
+  <div id="status">Progress saves automatically on this device. <span class="lastsent">Round 2 not sent to Jake yet.</span></div>
 </div>
 
 <script>
 (function () {
   "use strict";
   var OTHER = "Other / not sure";
-  var STORE = "nathan-msha-answers-v1";
+  var STORE = "nathan-msha-answers-v1";        // round 1 (unchanged key)
+  var STORE2 = "nathan-msha-answers-r2-v1";    // round 2
+  var UPLOG = "nathan-msha-r2-uploads";        // log of upload batches
   var SITES3 = ["Boonesboro", "Dix River", "Clover Bottom (#1 & #2)"];
   var SITES4 = ["Boonesboro", "Dix River", "Clover Bottom #1", "Clover Bottom #2"];
+  // Round 1 answers already received from Nathan (2026-10-22 partial, 39 of 44) - prefilled when this device has nothing saved.
+  var BASELINE = {"answered_by": "Nathan Harrison", "q1_p1_s1_choice": ["Underground mine"], "q1_p1_s1_text": "Crushed stone base, DGA, 67s, 57s, 9s, 11s, 3s, 4s, 5s, CCI", "q1_p1_s2_choice": ["Underground mine"], "q1_p1_s2_text": "Same as Boonesboro", "q1_p1_s3_choice": ["Both"], "q1_p1_s3_text": "Same as both", "q2_p1_s1_choice": ["Allen crew"], "q2_p1_s1_text": "Rooms are 35x45", "q2_p1_s2_choice": ["Allen crew"], "q2_p1_s2_text": "30x40", "q2_p1_s3_choice": ["Allen crew"], "q2_p1_s3_text": "Bench heights are 65, rooms are 30x40", "q3_p1_s1_choice": ["Tag board"], "q3_p1_s1_text": "Separate check in for visitors and contractors", "q3_p1_s2_choice": ["Tag board"], "q3_p1_s3_choice": ["Tag board"], "q3_p1_s3_text": "Separate check in for visitors.", "q4_p1_s1_text": "Not sure without looking.", "q4_p1_s2_text": "Cb and scale house are channel 16.", "q4_p1_s3_text": "Not sure without looking.", "q5_p1_choice": ["No sites run night shifts"], "q6_p1_choice": ["Boonesboro", "Dix River", "Clover Bottom #1", "Clover Bottom #2"], "q6_p2_choice": ["Life jacket required wherever there is a danger of falling into water"], "q7_p1_choice": ["Boonesboro", "Dix River", "Clover Bottom #1", "Clover Bottom #2"], "q8_p1_choice": ["Radio call before approaching a haul truck"], "q9_p1_text": "Quarry Equipment Pre-Operational Inspection", "q9_p2_choice": ["Scale house / office"], "q9_p2_text": "Scale house and app.", "q10_p1_s1_text": "15 mph surface and 25 underground. Haul trucks have right of way. Two way right hand traffic on all roads.", "q10_p1_s2_text": "15 mph onsite. Two way right hand traffic. Haul trucks have right of way.", "q10_p1_s3_text": "15 mph onsite. Two way right hand traffic. Haul trucks have right of way.", "q10_p2_choice": ["No - all right-hand traffic"], "q10_p3_choice": ["Yes - I'll email/text maps"], "q11_p1_choice": ["Must stay in the cab"], "q12_p1_s1_text": "Cat 988g/988h, cat 317g, cat 980k, John Deere 844l,p, komatsu wa500-6,7,8, etc", "q12_p1_s2_text": "Same", "q12_p1_s3_text": "Same", "q13_p1_text": "No dumping or parking near overhead lines. No raised beds. No tarping.", "q13_p2_s1_text": "Level 1", "q13_p2_s2_text": "Surface", "q13_p2_s3_text": "Surface and Mine #1", "q14_p1_s1_text": "Uc 1, 2, 3, 4, front fuel tank, shop fuel tank, c 2, 30, 31, 32", "q14_p1_s2_text": "None", "q14_p1_s3_text": "Liwell plant, primary, secondary, pug mill, surge tunnel, recycle bin", "q15_p1_choice": ["Hydraulic rock breaker"], "q15_p1_text": "First and then lock out/block and excavator or blast", "q16_p1_s1_text": "Around plant while running, around mine fans", "q16_p1_s2_text": "Same", "q16_p1_s3_text": "Same", "q17_p1_choice": ["Yes - written permit"], "q17_p2_choice": ["30 minutes"], "q18_p1_choice": ["Yes, correct"], "q18_p2_s1_choice": ["Allen crew"], "q18_p2_s2_choice": ["Allen crew"], "q18_p2_s3_choice": ["Allen crew"], "q18_p2_s3_text": "Sometimes Austin Powder on surface", "q19_p1_text": "6 feet", "q19_p2_choice": ["Other / not sure"], "q20_p1_text": "Siren and strobe beacons", "q20_p2_text": "Siren out and block all entrances to underground headers", "q21_p1_choice": ["Radios / phones kept a set distance from loaded holes"], "q22_p1_s1_choice": ["Intake fan"], "q22_p1_s2_choice": ["Intake fan"], "q22_p1_s3_choice": ["Intake fan"], "q23_p1_choice": ["Radio", "Strobe lights"], "q24_p1_choice": ["No, but we could get one"], "q25_p1_s1_choice": ["Radio call"], "q25_p1_s2_choice": ["Radio call"], "q25_p1_s3_choice": ["Radio call"], "q26_p1_text": "ABC 5-20 lb and co2", "q26_p2_choice": ["Classroom / discussion only"], "q27_p1_choice": ["Yes - I'll email the maps"], "q28_p1_choice": ["No"], "q30_p1_text": "Any miner", "q30_p2_text": "Any miner", "q30_p3_text": "Primary escapeway", "q31_p1_s1_text": "Keith on Dropbox", "q31_p1_s2_text": "Same", "q31_p1_s3_text": "Same", "q32_p1_choice": ["Nathan / safety manager"], "q32_p2_text": "New miner 5000-23 and ART", "q33_p1_choice": ["Nathan / safety manager"], "q33_p2_choice": ["Same day as the online course"], "q34_p1_choice": ["American Heart Association (AHA)"], "q35_p1_s1_choice": ["Bottles"], "q35_p1_s1_text": "Scale house, breakroom, shop, primary crusher MCC", "q35_p1_s2_choice": ["Bottles"], "q35_p1_s2_text": "Scalehouse", "q35_p1_s3_choice": ["Bottles"], "q35_p1_s3_text": "Scalehouse, breakroom", "q36_p1_choice": ["Informal practice, nothing written"], "q37_p1_s1_text": "Dropbox, me", "q37_p1_s2_text": "Same", "q37_p1_s3_text": "Same", "q38_p1_s1_text": "Breakroom", "q38_p1_s2_text": "Same", "q38_p1_s3_text": "Same", "q39_p1_choice": ["Diesel", "Motor / hydraulic oils", "Grease", "Antifreeze / coolant", "ANFO", "Emulsion / packaged explosives", "Solvents / degreasers", "Welding gases", "Other / not sure"], "q39_p3_choice": ["Other / not sure"], "q40_p1_choice": ["No"]};
 
-  // Part types: text | radio | check | sites (checkbox of sites) | persite (per-site box, optional choices)
+  // Part types: text | radio | check | sites (checkbox of sites) | persite (per-site box, optional choices; optional custom site list)
   var TOPICS = [
     { t: "Site layout and operations", qs: [
       { tag: "M1 site walkthroughs", q: "In one sentence per site, what does the operation consist of: surface pit, underground mine, or both, and what main products?",
@@ -227,6 +281,81 @@
     "First-aid kit contents and eyewash station"
   ];
 
+
+  // ===== ROUND 2 =====
+  var SITES_UG = ["Boonesboro", "Dix River", "Clover Bottom (#1 & #2)"];
+  var SITES_ESC = ["Boonesboro", "Clover Bottom #1", "Clover Bottom #2", "Dix River Stone"];
+  var R2TOPICS = [
+    { t: "Still open from round 1", qs: [
+      { tag: "Round 1 Q29 - barricading", q: "What signaling procedure should barricaded miners use (e.g., a tapping pattern on a pipe or the roof)?",
+        parts: [{ type: "radio", opts: ["We use a set tapping / signal pattern (describe below)", "No Allen procedure - use the standard MSHA guidance", "No set procedure yet"], ph: "Pattern / details" }] },
+      { tag: "Round 1 Q41 - line of authority", q: "Please confirm the line of authority (who reports to whom) at each site.",
+        parts: [{ type: "persite", ph: "e.g. Superintendent > Foreman > Lead > Miner (names or roles)" }] },
+      { tag: "Round 1 Q42 - safety rules", q: "What is the name of Allen's operator safety rules document/handbook?",
+        parts: [{ type: "radio", opts: ["We have a handbook (name below)", "No written handbook"], ph: "Handbook / document name" }] },
+      { tag: "Round 1 Q43 - hazard reporting", q: "What is Allen's hazard-reporting procedure, and is there a form?",
+        parts: [{ type: "check", label: "How hazards are reported", opts: ["Tell supervisor verbally", "Written hazard-report form", "Workplace exam book", "Phone / app"] },
+                { type: "text", label: "Form name / steps", ph: "Form name, who it goes to, what happens next" }] },
+      { tag: "Round 1 Q44 - emergency card", q: "Mine command, rescue stations and Clover Bottom's MSHA IDs.",
+        parts: [{ type: "radio", label: "OK to show names (not just roles) of mine command on screen?", opts: ["Yes, names are OK", "Roles only"] },
+                { type: "persite", label: "Mine rescue station(s) for each site", ph: "Rescue station / team" },
+                { type: "radio", label: "Clover Bottom MSHA IDs: #1 = 15-00112 and #2 = 15-19898 - correct?", opts: ["Yes, correct", "No (correct IDs below)"] }] }
+    ]},
+    { t: "Quick follow-ups on your round 1 answers", qs: [
+      { tag: "Follow-up to Q19 - drill tie-off", q: "When must people tie off near the crest (driller, blaster's helper, anyone walking the bench)?",
+        parts: [{ type: "check", label: "Tie-off required when", opts: ["Drilling or loading front-row holes", "Within a set distance of the crest (say how far below)", "Anytime there is a danger of falling", "Drill has a guarded/enclosed cab, no tie-off needed in the cab"], ph: "Distance from crest, anchor points, other details" }] },
+      { tag: "Follow-up to Q21 - lightning", q: "What do you do with a loaded shot when lightning or an electrical storm comes in?",
+        parts: [{ type: "check", label: "Procedure (check all that apply)", opts: ["Stop loading and clear everyone from the blast area", "Guard all entrances until the storm passes", "Lightning detector or weather app used", "Non-electric initiation, but we still clear the area", "Blast contractor / blaster in charge decides"], ph: "Distances, wait time after last strike, other details" }] },
+      { tag: "Follow-up to Q28 - barricading", q: "Where are barricading materials (brattice, nails, hammer, etc.) stored at each underground mine?",
+        parts: [{ type: "persite", sites: SITES_UG, radio: ["Stored underground (where below)", "Stored on the surface (where below)", "None kept on site"], ph: "Location" }] },
+      { tag: "Follow-up to Q16 - respirators", q: "Which areas or jobs require respirators?",
+        parts: [{ type: "persite", check: ["No area requires respirators", "Plant / crusher / screens", "Loadout / bins", "Shop (welding, grinding)", "Drill", "Underground", "Voluntary use only"], ph: "Details" }] },
+      { tag: "Follow-up to Q4 - radios", q: "What radio channels, call signs and emergency call words are used at Boonesboro and Clover Bottom? (Dix River = channel 16 for CB and scale house, from round 1)",
+        parts: [{ type: "persite", sites: ["Boonesboro", "Clover Bottom (#1 & #2)"], ph: "Channels / who is on which channel / emergency call word" }] },
+      { tag: "Follow-up to Q14 - spelling", q: "How is the Clover Bottom \"Liwell\" plant spelled? (so it's right on screen)",
+        parts: [{ type: "radio", opts: ["\"Liwell\" is correct", "It's spelled differently (below)"], ph: "Correct spelling" }] },
+      { tag: "Follow-up to Q32 - records", q: "What does \"ART\" stand for in \"New miner 5000-23 and ART\"?",
+        parts: [{ type: "text", ph: "ART = ..." }] },
+      { tag: "Follow-up to Q14 - Dix River conveyors", q: "Dix River conveyors: you answered \"None\" for pull-cords / emergency stops. Which is it?",
+        parts: [{ type: "radio", opts: ["Dix River has no conveyors", "It has conveyors, but none have pull-cords or e-stops", "Some conveyors do have pull-cords / e-stops (list below)"], ph: "Details" }] }
+    ]},
+    { t: "Escapeways and evacuation (for the escapeway map videos)", qs: [
+      { tag: "Batch 2 - escapeway maps", q: "Escapeway maps: can you send the map (or a phone photo of the posted map) for each mine?",
+        parts: [{ type: "persite", sites: SITES_ESC, radio: ["Uploading it below", "I'll text/email it to Jake", "No posted map"], ph: "Notes" }] },
+      { tag: "Batch 2 - escapeways", q: "Describe the primary escapeway route at each mine (from the working area to the surface).",
+        parts: [{ type: "persite", sites: SITES_ESC, ph: "e.g. From Level 1 headers, follow the main haulage out the portal..." }] },
+      { tag: "Batch 2 - escapeways", q: "Describe the secondary (alternate) escapeway route at each mine.",
+        parts: [{ type: "persite", sites: SITES_ESC, ph: "Secondary route" }] },
+      { tag: "Batch 2 - escapeways", q: "How are escapeways marked at each mine?",
+        parts: [{ type: "persite", sites: SITES_ESC, check: ["Reflective signs / arrows", "Lifelines", "Painted marks on rib", "Lights / strobes"], ph: "Details (colors, spacing, etc.)" }] },
+      { tag: "Batch 2 - evacuation", q: "Where is the gathering point (head-count spot) at each mine?",
+        parts: [{ type: "persite", sites: SITES_ESC, ph: "Gathering point" }] },
+      { tag: "Batch 2 - escapeway maps", q: "Where are the escapeway maps posted at each mine?",
+        parts: [{ type: "persite", sites: SITES_ESC, check: ["Scale house", "Breakroom", "Shop", "Portal / mine entrance", "Office", "Underground"], ph: "Details" }] },
+      { tag: "Batch 2 - Clover Bottom", q: "At Clover Bottom, how do miners tag in at the right mine (#1 vs #2)?",
+        parts: [{ type: "radio", opts: ["Separate tag board for each mine", "One tag board with #1 and #2 sections", "Tell the lead / radio call"], ph: "Details" }] }
+    ]},
+    { t: "SDS and noise", qs: [
+      { tag: "Batch 2 - reading an SDS", q: "Pick one real product used on site for the \"reading an SDS\" video. What is the product name, and can you send its SDS?",
+        parts: [{ type: "radio", label: "Product type", opts: ["Diesel fuel", "Hydraulic oil", "Emulsion", "ANFO"] },
+                { type: "text", label: "Product name and supplier", ph: "e.g. brand / product name, supplier" },
+                { type: "radio", label: "SDS", opts: ["Uploading it below", "I'll text/email it to Jake", "Use the manufacturer's SDS from the web"] }] },
+      { tag: "Batch 2 - noise", q: "Which equipment or areas are especially loud at each site?",
+        parts: [{ type: "persite", check: ["Drill", "Primary crusher", "Plant / screens", "Shop", "Mine fans", "Rock breaker", "Underground equipment"], ph: "Details" }] },
+      { tag: "Batch 2 - noise", q: "Is double hearing protection (plugs + muffs) used anywhere?",
+        parts: [{ type: "radio", opts: ["Yes - required (where below)", "Recommended but not required", "No"], ph: "Where / which jobs" }] }
+    ]}
+  ];
+
+  var R2PHOTOS = [
+    "A working place in the plant (for a spot-the-hazard exercise; normal day, nothing staged)",
+    "A working place in the pit or at an underground face",
+    "A working place in the shop",
+    "5 landmarks at each site that a new miner should recognize (e.g. scale house, shop, portal, primary, gathering point)",
+    "A damaged trailing cable or bad splice (an example - tagged out is fine)",
+    "Plant dust controls (water sprays, enclosures, covered conveyors, etc.)"
+  ];
+
   function el(tag, attrs, kids) {
     var e = document.createElement(tag);
     if (attrs) for (var k in attrs) { if (k === "text") e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); }
@@ -243,44 +372,64 @@
   }
   function ta(name, ph) { return el("textarea", { name: name, rows: "2", placeholder: ph || "Answer / notes" }); }
 
-  var qRoot = document.getElementById("questions");
-  var n = 0, QLIST = [];
-  TOPICS.forEach(function (topic) {
-    qRoot.appendChild(el("h2", { "class": "topic", text: topic.t }));
-    topic.qs.forEach(function (Q) {
-      n++; var id = "q" + n; Q.n = n; Q.id = id; QLIST.push(Q);
-      var card = el("div", { "class": "q", id: id });
-      card.appendChild(el("div", { "class": "qtag", text: Q.tag }));
-      var qt = el("div", { "class": "qtext" }, [el("span", { "class": "num", text: n + "." }), document.createTextNode(Q.q)]);
-      card.appendChild(qt);
-      Q.parts.forEach(function (p, i) {
-        var pn = id + "_p" + (i + 1); p.name = pn;
-        var part = el("div", { "class": "part" });
-        if (p.label) part.appendChild(el("div", { "class": "plabel", text: p.label }));
-        if (p.type === "text") {
-          part.appendChild(ta(pn + "_text", p.ph));
-        } else if (p.type === "radio" || p.type === "check") {
-          part.appendChild(optGroup(pn + "_choice", p.type === "radio" ? "radio" : "checkbox", p.opts));
-          part.appendChild(ta(pn + "_text", p.ph || "Details / other (optional)"));
-        } else if (p.type === "sites") {
-          part.appendChild(optGroup(pn + "_choice", "checkbox", SITES4.concat(p.none ? [p.none] : [])));
-          part.appendChild(ta(pn + "_text", p.ph || "Details (optional)"));
-        } else if (p.type === "persite") {
-          SITES3.forEach(function (s, si) {
-            var sn = pn + "_s" + (si + 1);
-            var sd = el("div", { "class": "site" }, [el("div", { "class": "sitename", text: s })]);
-            if (p.radio) sd.appendChild(optGroup(sn + "_choice", "radio", p.radio));
-            if (p.check) sd.appendChild(optGroup(sn + "_choice", "checkbox", p.check));
-            sd.appendChild(ta(sn + "_text", p.ph));
-            part.appendChild(sd);
-          });
-        }
-        card.appendChild(part);
+  // Builds question cards. idp = element-id / field-name prefix ("q" for round 1, "r2_q" for round 2); nump = label prefix.
+  function buildQuestions(topics, root, idp, nump) {
+    var n = 0, list = [];
+    topics.forEach(function (topic) {
+      root.appendChild(el("h2", { "class": "topic", text: topic.t }));
+      topic.qs.forEach(function (Q) {
+        n++; var id = idp + n; Q.n = n; Q.label = nump + n; Q.id = id; list.push(Q);
+        var card = el("div", { "class": "q", id: id });
+        card.appendChild(el("div", { "class": "qtag", text: Q.tag }));
+        card.appendChild(el("div", { "class": "qtext" }, [el("span", { "class": "num", text: Q.label + "." }), document.createTextNode(Q.q)]));
+        Q.parts.forEach(function (p, i) {
+          var pn = id + "_p" + (i + 1); p.name = pn;
+          var part = el("div", { "class": "part" });
+          if (p.label) part.appendChild(el("div", { "class": "plabel", text: p.label }));
+          if (p.type === "text") {
+            part.appendChild(ta(pn + "_text", p.ph));
+          } else if (p.type === "radio" || p.type === "check") {
+            part.appendChild(optGroup(pn + "_choice", p.type === "radio" ? "radio" : "checkbox", p.opts));
+            part.appendChild(ta(pn + "_text", p.ph || "Details / other (optional)"));
+          } else if (p.type === "sites") {
+            part.appendChild(optGroup(pn + "_choice", "checkbox", SITES4.concat(p.none ? [p.none] : [])));
+            part.appendChild(ta(pn + "_text", p.ph || "Details (optional)"));
+          } else if (p.type === "persite") {
+            (p.sites || SITES3).forEach(function (s, si) {
+              var sn = pn + "_s" + (si + 1);
+              var sd = el("div", { "class": "site" }, [el("div", { "class": "sitename", text: s })]);
+              if (p.radio) sd.appendChild(optGroup(sn + "_choice", "radio", p.radio));
+              if (p.check) sd.appendChild(optGroup(sn + "_choice", "checkbox", p.check));
+              sd.appendChild(ta(sn + "_text", p.ph));
+              part.appendChild(sd);
+            });
+          }
+          card.appendChild(part);
+        });
+        root.appendChild(card);
       });
-      qRoot.appendChild(card);
     });
+    return list;
+  }
+  var R2LIST = buildQuestions(R2TOPICS, document.getElementById("r2questions"), "r2_q", "R2-");
+  var QLIST = buildQuestions(TOPICS, document.getElementById("questions"), "q", "");
+
+  // Round 2 photo checklist
+  var r2pRoot = document.getElementById("r2photos");
+  R2PHOTOS.forEach(function (ph, i) {
+    var name = "r2_photo" + (i + 1);
+    var card = el("div", { "class": "q photo", id: name });
+    card.appendChild(el("div", { "class": "qtext" }, [el("span", { "class": "num", text: "R2-P" + (i + 1) + "." }), document.createTextNode(ph)]));
+    var box = el("div", { "class": "opts" });
+    box.appendChild(el("label", null, [el("input", { type: "checkbox", name: name + "_up", value: "Uploaded below" }), document.createTextNode("Uploaded below")]));
+    box.appendChild(el("label", null, [el("input", { type: "checkbox", name: name + "_will", value: "I'll text/email these to Jake" }), document.createTextNode("I'll text/email these to Jake")]));
+    box.appendChild(el("label", null, [el("input", { type: "checkbox", name: name + "_na", value: "Can't get this one" }), document.createTextNode("Can't get this one")]));
+    card.appendChild(box);
+    card.appendChild(el("input", { type: "text", name: name + "_comment", placeholder: "Comment (optional)" }));
+    r2pRoot.appendChild(card);
   });
 
+  // Round 1 photo requests (unchanged field names)
   var pRoot = document.getElementById("photos");
   PHOTOS.forEach(function (ph, i) {
     var name = "photo" + (i + 1);
@@ -295,47 +444,80 @@
   });
 
   var form = document.getElementById("f");
+  var r1set = document.getElementById("r1set");
 
   // ---- save / restore ----
+  // Round 1 fields keep their original names and key (STORE). Round 2 fields start with "r2_" and live in STORE2.
+  function isR2(k) { return k.indexOf("r2_") === 0; }
   function collect() {
     var data = {};
     Array.prototype.forEach.call(form.elements, function (e) {
-      if (!e.name || e.type === "hidden") return;
+      if (!e.name || e.type === "hidden" || e.type === "file") return;
       if (e.type === "radio" || e.type === "checkbox") {
         if (e.checked) (data[e.name] = data[e.name] || []).push(e.value);
       } else if (e.value.trim() !== "") data[e.name] = e.value;
     });
     return data;
   }
-  function restore() {
-    var raw; try { raw = localStorage.getItem(STORE); } catch (x) { return; }
-    if (!raw) return;
-    var data; try { data = JSON.parse(raw); } catch (x) { return; }
+  function split(d) {
+    var a = {}, b = {};
+    Object.keys(d).forEach(function (k) { (isR2(k) ? b : a)[k] = d[k]; });
+    return { r1: a, r2: b };
+  }
+  function load(key) { try { return JSON.parse(localStorage.getItem(key)) || null; } catch (x) { return null; } }
+  // Group key for round-1 merge: q12_p1_s2_text -> "q12", photo3_sent -> "photo3", else the field name.
+  function grp(k) { var m = /^(q\d+|photo\d+)_/.exec(k); return m ? m[1] : k; }
+  function round1Data() {
+    // Per question: this device's saved round-1 answers win; questions with nothing saved here use the answers already received.
+    var saved = load(STORE) || {}, out = {}, have = {};
+    Object.keys(saved).forEach(function (k) { if (!isR2(k)) { out[k] = saved[k]; have[grp(k)] = 1; } });
+    Object.keys(BASELINE).forEach(function (k) { if (!have[grp(k)]) out[k] = BASELINE[k]; });
+    return out;
+  }
+  function apply(data, filter) {
     Array.prototype.forEach.call(form.elements, function (e) {
-      if (!e.name || !(e.name in data)) return;
-      if (e.type === "radio" || e.type === "checkbox") e.checked = data[e.name].indexOf(e.value) !== -1;
-      else e.value = data[e.name];
+      if (!e.name || e.type === "hidden" || e.type === "file" || !filter(e.name)) return;
+      var v = data[e.name];
+      if (e.type === "radio" || e.type === "checkbox") e.checked = !!v && v.indexOf(e.value) !== -1;
+      else e.value = v == null ? "" : v;
     });
+  }
+  function restore() {
+    apply(round1Data(), function (k) { return !isR2(k); });
+    apply(load(STORE2) || {}, isR2);
   }
   var statusEl = document.getElementById("status");
   function setStatus(t) { statusEl.textContent = t; }
   var saveTimer;
   function save() {
-    try { localStorage.setItem(STORE, JSON.stringify(collect())); setStatus("Saved on this device " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + "."); }
-    catch (x) { setStatus("Couldn't autosave in this browser - use Copy or Download before closing."); }
+    try {
+      var s = split(collect());
+      localStorage.setItem(STORE2, JSON.stringify(s.r2));
+      localStorage.setItem(STORE, JSON.stringify(s.r1));
+      setStatus("Saved on this device " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + ".");
+    } catch (x) { setStatus("Couldn't autosave in this browser - use Copy or Download before closing."); }
+  }
+  function answeredIn(list, d) {
+    return list.filter(function (Q) { return Object.keys(d).some(function (k) { return k.indexOf(Q.id + "_") === 0; }); });
   }
   function updateProgress() {
-    var d = collect(), done = 0;
-    QLIST.forEach(function (Q) {
+    var d = collect(), done = answeredIn(R2LIST, d);
+    R2LIST.concat(QLIST).forEach(function (Q) {
       var has = Object.keys(d).some(function (k) { return k.indexOf(Q.id + "_") === 0; });
       document.getElementById(Q.id).classList.toggle("answered", has);
-      if (has) done++;
     });
-    document.getElementById("barfill").style.width = (100 * done / QLIST.length) + "%";
-    document.getElementById("progtext").textContent = done + " of " + QLIST.length + " questions answered";
+    document.getElementById("barfill").style.width = (100 * done.length / R2LIST.length) + "%";
+    document.getElementById("progtext").textContent = "Round 2: " + done.length + " of " + R2LIST.length + " questions answered";
   }
   form.addEventListener("input", function () { updateProgress(); clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); });
   form.addEventListener("change", function () { updateProgress(); save(); });
+
+  // Round 1 is read-only until he asks to correct something.
+  document.getElementById("r1edit").addEventListener("click", function () {
+    r1set.disabled = !r1set.disabled;
+    this.textContent = r1set.disabled ? "Correct an answer (unlock round 1)" : "Done correcting (lock round 1)";
+    document.getElementById("r1hint").textContent = r1set.disabled ? "Locked (read-only)." : "Unlocked - change anything that's wrong. Changes are sent to Jake with your Round 2 answers.";
+  });
 
   // ---- format answers ----
   function fmtPart(d, base) {
@@ -344,23 +526,24 @@
     if (d[base + "_text"]) out.push((out.length ? "Notes: " : "") + d[base + "_text"]);
     return out.join(" | ");
   }
-  function answersList() {
-    var d = collect(), rows = [];
-    rows.push(["Answered by", d.answered_by || ""]);
-    QLIST.forEach(function (Q) {
+  function qRows(list, d) {
+    return list.map(function (Q) {
       var lines = [];
       Q.parts.forEach(function (p) {
         var prefix = p.label ? p.label + ": " : "";
         if (p.type === "persite") {
           var sl = [];
-          SITES3.forEach(function (s, si) { var v = fmtPart(d, p.name + "_s" + (si + 1)); if (v) sl.push("  - " + s + ": " + v); });
+          (p.sites || SITES3).forEach(function (s, si) { var v = fmtPart(d, p.name + "_s" + (si + 1)); if (v) sl.push("  - " + s + ": " + v); });
           if (sl.length) lines.push((p.label ? p.label + ":\n" : "") + sl.join("\n"));
         } else {
           var v = fmtPart(d, p.name); if (v) lines.push(prefix + v);
         }
       });
-      rows.push([Q.n + ". " + Q.q, lines.join("\n")]);
+      return [Q.label + ". " + Q.q, lines.join("\n")];
     });
+  }
+  function r1Rows(d) {
+    var rows = qRows(QLIST, d);
     PHOTOS.forEach(function (ph, i) {
       var b = "photo" + (i + 1), bits = [];
       if (d[b + "_sent"]) bits.push("Sent");
@@ -368,17 +551,53 @@
       if (d[b + "_comment"]) bits.push("Comment: " + d[b + "_comment"]);
       rows.push(["P" + (i + 1) + ". " + ph, bits.join(" | ")]);
     });
-    rows.push(["Other comments", d.general_comments || ""]);
+    rows.push(["Other comments (round 1)", d.general_comments || ""]);
     return rows;
   }
+  function r2Rows(d) {
+    var rows = qRows(R2LIST, d);
+    R2PHOTOS.forEach(function (ph, i) {
+      var b = "r2_photo" + (i + 1), bits = [];
+      if (d[b + "_up"]) bits.push("Uploaded");
+      if (d[b + "_will"]) bits.push("Will text/email");
+      if (d[b + "_na"]) bits.push("Can't get this one");
+      if (d[b + "_comment"]) bits.push("Comment: " + d[b + "_comment"]);
+      rows.push(["R2-P" + (i + 1) + ". " + ph, bits.join(" | ")]);
+    });
+    rows.push(["R2 other comments", d.r2_comments || ""]);
+    return rows;
+  }
+  // Round-1 answers that differ from what Jake already received.
+  function corrections(d) {
+    var was = r1Rows(BASELINE), now = r1Rows(d);
+    return now.filter(function (r, i) { return r[1] !== was[i][1]; }).map(function (r) {
+      var i = now.indexOf(r);
+      return [r[0], r[1] || "(cleared)", was[i][1] || "(no answer before)"];
+    });
+  }
+  function correctionsText(c) {
+    return c.map(function (r) { return r[0] + "\nNOW: " + r[1].replace(/\n/g, "\n     ") + "\nWAS: " + r[2].replace(/\n/g, "\n     "); }).join("\n\n");
+  }
+  function uploadsLog() { return load(UPLOG) || []; }
+  function uploadsText() {
+    return uploadsLog().map(function (u) { return fmtTime(u.time) + " - " + (u.ok ? "" : "(not confirmed) ") + u.files.join(", ") + (u.what ? " [" + u.what + "]" : ""); }).join("\n");
+  }
   function answersText() {
-    return "MSHA Training Videos - Answers from Nathan\n" + new Date().toLocaleString() + "\n\n" +
-      answersList().map(function (r) { return r[0] + "\n" + (r[1] ? r[1] : "(no answer)") + "\n"; }).join("\n");
+    var d = collect(), c = corrections(d), up = uploadsText();
+    return "MSHA Training Videos - Answers from Nathan - ROUND 2\n" + new Date().toLocaleString() + "\n\nAnswered by\n" + (d.answered_by || "(no answer)") + "\n\n" +
+      r2Rows(d).map(function (r) { return r[0] + "\n" + (r[1] ? r[1] : "(no answer)") + "\n"; }).join("\n") +
+      "\nFile uploads sent from this page\n" + (up || "(none)") + "\n" +
+      "\n===== ROUND 1 CORRECTIONS =====\n" + (c.length ? correctionsText(c) : "(no changes to round 1 answers)") + "\n";
+  }
+  function round1Text() {
+    var d = collect();
+    return r1Rows(d).map(function (r) { return r[0] + "\n" + (r[1] ? r[1] : "(no answer)") + "\n"; }).join("\n");
   }
 
   // ---- copy / download ----
+  function fullText() { return answersText() + "\n===== ROUND 1 (current, for reference) =====\n\n" + round1Text(); }
   document.getElementById("copyBtn").addEventListener("click", function () {
-    var txt = answersText();
+    var txt = fullText();
     function fallback() {
       var t = el("textarea"); t.value = txt; t.style.position = "fixed"; t.style.opacity = "0"; document.body.appendChild(t); t.select();
       try { document.execCommand("copy"); setStatus("Answers copied - paste them into a text or email to Jake."); } catch (x) { setStatus("Copy failed - use Download instead."); }
@@ -388,8 +607,8 @@
     else fallback();
   });
   document.getElementById("dlBtn").addEventListener("click", function () {
-    var blob = new Blob([answersText()], { type: "text/plain" });
-    var a = el("a", { href: URL.createObjectURL(blob), download: "Nathan-MSHA-video-answers.txt" });
+    var blob = new Blob([fullText()], { type: "text/plain" });
+    var a = el("a", { href: URL.createObjectURL(blob), download: "Nathan-MSHA-video-answers-round2.txt" });
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setStatus("Downloaded. You can email the file to jcampbell325@gmail.com.");
   });
@@ -397,39 +616,49 @@
   // ---- sending (FormSubmit) ----
   var FORM_URL = "https://formsubmit.co/jcampbell325@gmail.com";
   var AJAX_URL = "https://formsubmit.co/ajax/jcampbell325@gmail.com";
-  var META = STORE + "-sent";          // { hash, time }
+  var META = STORE2 + "-sent";         // { hash, time, final } for round 2 (round 1's "-sent" key is left alone)
   var AUTO_MIN_MS = 3 * 60 * 1000;     // auto-send at most once every 3 minutes
   function getMeta() { try { return JSON.parse(localStorage.getItem(META)) || {}; } catch (x) { return {}; } }
   function setMeta(m) { try { localStorage.setItem(META, JSON.stringify(m)); } catch (x) {} }
   var memMeta = getMeta(), lastAutoTry = 0;
-  function hashNow() { return JSON.stringify(collect()); }
-  function countAnswered() {
-    var d = collect();
-    return QLIST.filter(function (Q) { return Object.keys(d).some(function (k) { return k.indexOf(Q.id + "_") === 0; }); }).length;
-  }
-  function hasAnything() { return Object.keys(collect()).length > 0; }
+  // What counts as "new": round 2 answers + round 1 corrections + upload log.
+  function sendable() { var d = collect(); return { r2: split(d).r2, c: corrections(d), up: uploadsLog().length }; }
+  function hashNow() { return JSON.stringify(sendable()); }
+  function countAnswered() { return answeredIn(R2LIST, collect()).length; }
+  function hasAnything() { var s = sendable(); return Object.keys(s.r2).length > 0 || s.c.length > 0 || s.up > 0; }
   function unsent() { return hasAnything() && hashNow() !== memMeta.hash; }
   function fmtTime(t) { return new Date(t).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" }); }
   function showLastSent() {
-    var txt = memMeta.time ? "Last sent to Jake: " + fmtTime(memMeta.time) + (memMeta.final ? " (final)" : " (progress)") + (unsent() ? " - newer changes not sent yet" : "") : "Not sent to Jake yet.";
+    var txt = memMeta.time ? "Round 2 last sent to Jake: " + fmtTime(memMeta.time) + (memMeta.final ? " (final)" : " (progress)") + (unsent() ? " - newer changes not sent yet" : "") : "Round 2 not sent to Jake yet.";
     Array.prototype.forEach.call(document.querySelectorAll(".lastsent"), function (e) { e.textContent = txt; });
   }
+  function clip(k) { return k.length > 90 ? k.slice(0, 87) + "..." : k; }
   function payload(kind) {
-    var rows = answersList(), done = countAnswered(), M = QLIST.length;
+    var d = collect(), rows = r2Rows(d), done = countAnswered(), M = R2LIST.length, c = corrections(d), up = uploadsText();
     var p = new URLSearchParams();
-    p.append("_subject", kind === "final" ? "Nathan - MSHA video answers" :
-      "Nathan - MSHA video answers (partial, " + done + " of " + M + " answered)");
+    p.append("_subject", kind === "final" ? "Nathan - MSHA answers Round 2 (final)" :
+      "Nathan - MSHA answers Round 2 (partial, " + done + " of " + M + " answered)");
     p.append("_captcha", "false");
     p.append("_template", "table");
-    p.append("Status", kind === "final" ? "FINAL submission" : (kind === "auto" ? "Partial - auto-sent when page was closed/hidden" : "Partial - Save progress button"));
-    p.append("Questions answered", done + " of " + M);
+    p.append("Round", "ROUND 2");
+    p.append("Status", kind === "final" ? "Round 2 - FINAL submission" : (kind === "auto" ? "Round 2 - partial, auto-sent when page was closed/hidden" : "Round 2 - partial, Save progress button"));
+    p.append("Answered by", d.answered_by || "-");
+    p.append("Round 2 questions answered", done + " of " + M);
     var used = {};
     rows.forEach(function (r) {
       if (kind !== "final" && !r[1]) return;          // partial: only answered items
-      var key = r[0].length > 90 ? r[0].slice(0, 87) + "..." : r[0];
+      var key = clip("[Round 2] " + r[0]);
       while (used[key]) key += " ";
       used[key] = 1;
       p.append(key, r[1] || "-");
+    });
+    if (up) p.append("[Round 2] File uploads sent from this page", up);
+    p.append("Round 1 corrections", c.length ? c.length + " changed answer(s) - see below" : "None");
+    c.forEach(function (r) {
+      var key = clip("[Round 1 correction] " + r[0]);
+      while (used[key]) key += " ";
+      used[key] = 1;
+      p.append(key, "NOW: " + r[1] + "\nWAS: " + r[2]);
     });
     p.append("All answers (plain text)", answersText());
     return p;
@@ -447,7 +676,7 @@
       });
   }
   function autoSend() {
-    if (!unsent()) return;
+    if (uploading || !unsent()) return;
     var now = Date.now();
     if (now - lastAutoTry < AUTO_MIN_MS || (memMeta.time && now - memMeta.time < AUTO_MIN_MS)) return;
     lastAutoTry = now;
@@ -465,11 +694,11 @@
   function busy(on) { Array.prototype.forEach.call(document.querySelectorAll(".saveBtn, #submitBtn"), function (b) { b.disabled = on; }); }
   Array.prototype.forEach.call(document.querySelectorAll(".saveBtn"), function (btn) {
     btn.addEventListener("click", function () {
-      if (!hasAnything()) { setStatus("Nothing to send yet - answer a question first."); return; }
+      if (!hasAnything()) { setStatus("Nothing new to send yet - answer a Round 2 question first."); return; }
       save(); busy(true); setStatus("Sending what you have so far...");
       ajaxSend("partial").then(function (r) {
         busy(false);
-        setStatus(r.ok ? "Progress sent to Jake (" + countAnswered() + " of " + QLIST.length + " answered). Keep going any time." :
+        setStatus(r.ok ? "Progress sent to Jake (Round 2: " + countAnswered() + " of " + R2LIST.length + " answered). Keep going any time." :
           "Couldn't send right now" + (r.msg ? " (" + r.msg + ")" : "") + ". Your answers are still saved here - try again, or use Copy / Download.");
         showLastSent();
       }, function () { busy(false); setStatus("No connection? Your answers are still saved here - try again later, or use Copy / Download."); });
@@ -479,11 +708,11 @@
   // Final: try AJAX; if the network call fails outright, fall back to a classic form POST.
   document.getElementById("submitBtn").addEventListener("click", function () {
     var done = countAnswered();
-    if (!confirm("Submit your final answers to Jake now? (" + done + " of " + QLIST.length + " questions answered. Your answers stay saved on this device too.)")) return;
+    if (!confirm("Submit your final Round 2 answers to Jake now? (" + done + " of " + R2LIST.length + " Round 2 questions answered. Your answers stay saved on this device too.)")) return;
     save(); busy(true); setStatus("Sending final answers...");
     ajaxSend("final").then(function (r) {
       busy(false);
-      setStatus(r.ok ? "Thanks, Nathan - your final answers were sent to Jake." :
+      setStatus(r.ok ? "Thanks, Nathan - your final Round 2 answers were sent to Jake." :
         "Couldn't send right now" + (r.msg ? " (" + r.msg + ")" : "") + ". Your answers are still saved here - try again, or use Copy / Download.");
       showLastSent();
     }, function () {
@@ -498,9 +727,112 @@
   form.addEventListener("change", showLastSent);
   form.addEventListener("input", function () { clearTimeout(window.__ls); window.__ls = setTimeout(showLastSent, 500); });
 
+  // ---- file uploads (separate multipart POST; FormSubmit's AJAX endpoint can't carry files) ----
+  var MAX_TOTAL = 9 * 1024 * 1024;   // FormSubmit limit is 10 MB per submission; keep a margin
+  var MAX_FILES = 10;
+  var upInput = document.getElementById("upFiles"), upList = document.getElementById("upList"), upBtn = document.getElementById("upBtn"),
+      upStatus = document.getElementById("upStatus"), upFrame = document.getElementById("upframe");
+  var prepared = [], uploading = false, upTimer = null, upPending = null;
+  function mb(b) { return (b / 1048576).toFixed(1) + " MB"; }
+  function canSetFiles() { try { return typeof DataTransfer === "function" && !!new DataTransfer().items; } catch (x) { return false; } }
+  // Shrink big phone photos so more fit under the size limit (maps stay readable at 3000 px).
+  function shrink(file) {
+    return new Promise(function (resolve) {
+      if (!/^image\/(jpeg|png|webp)$/.test(file.type) || file.size < 1.5 * 1048576 || !canSetFiles()) return resolve(file);
+      var url = URL.createObjectURL(file), img = new Image();
+      img.onload = function () {
+        var max = 3000, w = img.naturalWidth, h = img.naturalHeight, s = Math.min(1, max / Math.max(w, h));
+        var c = document.createElement("canvas"); c.width = Math.round(w * s); c.height = Math.round(h * s);
+        c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        c.toBlob(function (b) {
+          if (!b || b.size >= file.size) return resolve(file);
+          resolve(new File([b], file.name.replace(/\.[^.]+$/, "") + ".jpg", { type: "image/jpeg", lastModified: file.lastModified }));
+        }, "image/jpeg", 0.85);
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); resolve(file); };
+      img.src = url;
+    });
+  }
+  function renderUpList() {
+    upList.innerHTML = "";
+    var total = prepared.reduce(function (s, f) { return s + f.size; }, 0);
+    prepared.forEach(function (f) { upList.appendChild(el("li", { text: f.name + " (" + mb(f.size) + ")" })); });
+    var bad = total > MAX_TOTAL ? "Too big to send together (" + mb(total) + "). Please pick fewer files (under 9 MB total) and send the rest in another batch." :
+              prepared.length > MAX_FILES ? "Please pick " + MAX_FILES + " files or fewer per batch." : "";
+    upBtn.disabled = !prepared.length || !!bad || uploading;
+    upStatus.textContent = bad || (prepared.length ? prepared.length + " file(s), " + mb(total) + " total - ready to send." : "");
+  }
+  upInput.addEventListener("change", function (ev) {
+    ev.stopPropagation();
+    var files = Array.prototype.slice.call(upInput.files || []);
+    upStatus.textContent = files.length ? "Preparing photos..." : ""; upBtn.disabled = true;
+    Promise.all(files.map(shrink)).then(function (out) { prepared = out; renderUpList(); });
+  });
+  upInput.addEventListener("input", function (ev) { ev.stopPropagation(); });
+  function checkedCats() {
+    return Array.prototype.filter.call(document.querySelectorAll("#upCats input"), function (c) { return c.checked; }).map(function (c) { return c.value; });
+  }
+  function finishUpload(ok, msg) {
+    clearTimeout(upTimer); uploading = false;
+    if (upPending) {
+      var log = uploadsLog(); log.push({ time: Date.now(), files: upPending.files, what: upPending.what, ok: ok });
+      try { localStorage.setItem(UPLOG, JSON.stringify(log)); } catch (x) {}
+      upPending = null;
+    }
+    if (ok) { upInput.value = ""; prepared = []; document.getElementById("upNote").value = ""; }
+    renderUpList(); upStatus.textContent = msg; upStatus.style.color = ok ? "" : "#a12d2d";
+    renderUpLog(); showLastSent();
+  }
+  function renderUpLog() {
+    var t = uploadsText(); var box = document.getElementById("upLog");
+    box.textContent = t ? "Sent from this page so far:\n" + t : "";
+  }
+  upFrame.addEventListener("load", function () {
+    if (!uploading) return;
+    var href = "";
+    try { href = upFrame.contentWindow.location.href; } catch (x) { href = ""; }
+    if (/uploaded\.html/.test(href)) finishUpload(true, "Uploaded - thanks! Jake will get these by email. Add another batch any time.");
+    else finishUpload(false, "That upload may not have gone through. Please text or email these photos to Jake instead (or try again with fewer files).");
+  });
+  upBtn.addEventListener("click", function () {
+    if (!prepared.length || uploading) return;
+    var what = checkedCats().join("; "), note = document.getElementById("upNote").value.trim();
+    var f2 = el("form", { method: "POST", action: FORM_URL, enctype: "multipart/form-data", target: "upframe", style: "display:none" });
+    function hid(k, v) { f2.appendChild(el("input", { type: "hidden", name: k, value: v })); }
+    hid("_subject", "Nathan - MSHA Round 2 uploads (" + prepared.length + " file" + (prepared.length > 1 ? "s" : "") + (what ? ": " + what : "") + ")");
+    hid("_captcha", "false"); hid("_template", "table");
+    hid("_next", new URL("uploaded.html", location.href).href);
+    hid("Round", "ROUND 2 - file upload");
+    hid("From", (form.elements.answered_by && form.elements.answered_by.value) || "Nathan");
+    hid("What these are", what || "-");
+    hid("Notes", note || "-");
+    hid("Files", prepared.map(function (f) { return f.name; }).join(", "));
+    var direct = canSetFiles();
+    if (direct) {
+      prepared.forEach(function (f, i) {
+        var inp = el("input", { type: "file", name: "attachment_" + (i + 1) });
+        var dt = new DataTransfer(); dt.items.add(f); inp.files = dt.files;
+        f2.appendChild(inp);
+      });
+    } else {
+      // Older browsers: send the picker itself (files at original size).
+      upInput.setAttribute("name", "attachment"); f2.appendChild(upInput);
+    }
+    document.body.appendChild(f2);
+    uploading = true; upBtn.disabled = true;
+    upPending = { files: prepared.map(function (f) { return f.name; }), what: what || note };
+    upStatus.textContent = "Uploading " + prepared.length + " file(s)... keep this page open.";
+    f2.submit();
+    if (!direct) { upInput.removeAttribute("name"); document.getElementById("upPick").appendChild(upInput); }
+    setTimeout(function () { if (f2.parentNode) f2.parentNode.removeChild(f2); }, 1000);
+    upTimer = setTimeout(function () { if (uploading) finishUpload(false, "Still no answer from the upload after 4 minutes. If Jake doesn't confirm he got them, please text or email the photos."); }, 4 * 60 * 1000);
+  });
+
   restore();
   updateProgress();
   showLastSent();
+  renderUpLog();
   if (location.hash === "#sent") setStatus("Thanks, Nathan - your answers were sent to Jake. They're still saved here if you want to change anything and send again.");
 })();
 </script>
